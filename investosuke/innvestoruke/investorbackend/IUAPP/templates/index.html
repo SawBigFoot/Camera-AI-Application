@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fennoscandia Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+          font-family: 'TheFlameProofer';
+          src: url('./theflameproofer.ttf') format('truetype');
+        }
+
+        /* Egne farger */
+        .bg-custom-light {
+          background-color: #f4eee9; /* Lys beige bakgrunn, lun og behagelig */
+        }
+        .bg-custom-orange {
+          background-color: #e2b97f; /* Myk oransje-beige tone */
+        }
+        .bg-custom-darkred {
+          background-color: #2b2b2b; /* Dyp grå-svart for en koselig følelse */
+        }
+        .bg-custom-deepred {
+          background-color: #4a4a4a; /* Mørkere grå for bakgrunnen */
+        }
+        .text-custom-darkred {
+          color: #2b2b2b; /* Mørk tekstfarge for en avslappende effekt */
+        }
+        .text-custom-light {
+          color: #ffffff; /* Lys beige tekstfarge for kontrast */
+        }
+        .text-custom-orange {
+          color: #ffffff; /* Oransje-beige for subtile detaljer */
+        }
+
+        /* Knappe-hover-effekter */
+        .button-hover:hover {
+          background-color: #c0996e; /* Mørkere oransje-beige ved hover */
+          transform: scale(1.05);
+        }
+
+        /* Rundede kanter og lett skyggelegging for et mykere utseende */
+        .rounded-lg {
+          border-radius: 15px;
+        }
+        
+        .shadow-soft {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lett skyggeeffekt for å myke opp */
+        }
+
+        body {
+          font-family: 'TheFlameProofer', sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Justering av overskrifter og tekst for en mer avslappet stil */
+        h1, p {
+          font-family: 'Arial', sans-serif;
+        }
+
+    </style>
+</head>
+<body class="bg-custom-light w-screen h-screen">
+    <!-- Navigasjonsseksjon -->
+    <nav class="flex flex-col items-center justify-center pt-8 pb-6 bg-custom-deepred shadow-soft">
+        <h1 class="text-8xl text-custom-light font-bold">Fennoscandia Studios</h1>
+        <div class="space-x-6 text-2xl text-custom-light mt-4">
+            <a href="login">
+                <button class="bg-custom-orange p-4 rounded-lg button-hover text-custom-light shadow-soft">
+                    Logg Inn
+                </button>
+            </a>
+            <a href="signup">
+                <button class="bg-custom-orange p-4 rounded-lg button-hover text-custom-light shadow-soft">
+                    Registrer Deg
+                </button>
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Hovedinnhold -->
+    <div class="flex items-center w-screen h-screen flex-col text-xl text-custom-darkred mt-10">
+        <div class="w-2/3 text-center p-6">
+            <p class="font-serif text-xl text-custom-darkred">Velkommen til Fennoscandia Studios – Din pålitelige leverandør av AI-baserte ansiktsgjenkjenningsmoduler i Oslo.</p>
+        </div>
+    </div>
+</body>
+</html>

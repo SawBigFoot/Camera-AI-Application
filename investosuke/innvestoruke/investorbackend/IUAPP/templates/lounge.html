@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fennoscandia Studios - Identity Detection Camera</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f7f1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #e2e8f0;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        header p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .welcome {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px 20px;
+        }
+        .welcome h1 {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        .welcome p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #d2b48c;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background-color: #c0a084;
+            transform: translateY(-2px);
+        }
+        .button:active {
+            transform: translateY(1px);
+        }
+        #loading {
+            display: none;
+            font-size: 1.2rem;
+            color: #888;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+            border-top: 2px solid #e2e8f0;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+
+    <!-- Link to your external JS file -->
+    <script src="{{ url_for('static', filename='lounge.js') }}"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Fennoscandia Studios</h1>
+        <p>Innovativ teknologi for fremtiden</p>
+    </header>
+
+    <div class="welcome">
+        <h1>Velkommen til Fennoscandia Studios sin første AI kamera modell!</h1>
+        <p>Hos Fennoscandia Studios har vi utviklet teknologi for identitetsgjenkjenning ved hjelp av avanserte kamerasystemer.</p>
+        <p>Du er logget inn og klar til å utforske fremtidens identitetsgjenkjenning, {{ name }}!</p>
+        <a href="/home" class="button">Gå til Dashbordet</a>
+
+        <!-- New Button to Run AI Model -->
+        <button class="button" onclick="runAIModel()">Kjør AI-modellen</button>
+        
+        <!-- Loading Indicator -->
+        <p id="loading">Kjører AI-modellen...</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fennoscandia Studios. Alle rettigheter reservert.</p>
+    </footer>
+
+</body>
+</html>
