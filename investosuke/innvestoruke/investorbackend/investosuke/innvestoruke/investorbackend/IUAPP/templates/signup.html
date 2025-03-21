@@ -1,0 +1,115 @@
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="investorbackend/signup.js" defer></script>
+    <style>
+        /* Definerer fonten som skal brukes på siden */
+        @font-face {
+          font-family: 'TheFlameProofer';
+          src: url('./theflameproofer.ttf') format('truetype');
+        }
+
+        body {
+          font-family: 'TheFlameProofer', sans-serif;
+        }
+
+        /* Farger */
+        .bg-custom-light {
+          background-color: #f9f7f1; /* Beige bakgrunn */
+        }
+        .bg-custom-orange {
+          background-color: #d2b48c; /* Beige */
+        }
+        .bg-custom-red {
+          background-color: #b0a185; /* Mørk beige */
+        }
+        .bg-custom-darkred {
+          background-color: #222222; /* Svart */
+        }
+        .bg-custom-deepred {
+          background-color: #000000; /* Svart */
+        }
+        .text-custom-darkred {
+          color: #222222; /* Svart */
+        }
+        .text-custom-light {
+          color: #f9f7f1; /* Beige */
+        }
+
+        /* Modal for verifikasjonskode */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+            padding-top: 100px;
+        }
+
+        .modal-content {
+            background-color: #f9f7f1;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen bg-custom-light">
+  <div class="flex flex-col items-center justify-center w-full h-full">
+    <h1 class="text-5xl text-custom-darkred font-bold mb-6">Registrer deg</h1>
+    <h1 class="p-2 text-2xl text-custom-red mb-6">{{ info }}</h1>
+    <form class="flex flex-col text-xl text-custom-darkred space-y-6 w-80" action="/form_signup" method="post" id="signupForm">
+      
+      <label for="username" class="font-semibold text-custom-darkred mb-2">Brukernavn:</label>
+      <input class="p-3 rounded-md text-black mb-4" type="text" name="username" id="username" placeholder="Skriv inn brukernavn" required>
+
+      <label for="email" class="font-semibold text-custom-darkred mb-2">E-Mail:</label>
+      <input class="p-3 rounded-md text-black mb-4" type="email" name="gmail" id="email" placeholder="eksempel@gmail.com" required>
+
+      <label for="password" class="font-semibold text-custom-darkred mb-2">Passord:</label>
+      <input class="p-3 rounded-md text-black mb-6" name="password" id="password" type="password" maxlength="12" placeholder="Skriv inn passord" required>
+
+      <div class="flex justify-between items-center space-x-2 text-xl pt-4">
+        <input class="bg-custom-orange p-3 rounded-lg cursor-pointer w-full hover:bg-custom-red transition-all text-custom-light" type="submit" value="Registrer deg">
+      </div>
+
+      <div class="text-center pt-6">
+        <a class="bg-custom-darkred p-3 rounded-lg cursor-pointer w-full block text-center hover:bg-custom-deepred transition-all text-custom-light" href="{{ url_for('loginSite') }}">Logg inn</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal for verifikasjonskode -->
+  <div id="verificationModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="text-custom-darkred text-xl">Verifikasjonskode</h2>
+      <p>Vennligst skriv inn verifikasjonskoden sendt til e-posten din:</p>
+      <input type="text" id="verificationInput" class="p-3 rounded-md text-black mb-4" placeholder="Skriv inn kode" required>
+      <button id="submitVerification" class="bg-custom-orange p-3 rounded-lg text-custom-light hover:bg-custom-red transition-all w-full">Bekreft</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+    "people": [
+        {
+            "username": "aidanandino",
+            "password": "JDJiJDEyJG1CR0VEMDZXNEg3R3c5cE1tVHVUc3V3V3YwQ3dmRHRpNHEzYnJJT095U0V0VFBiVVVyM1Vx",
+            "gmail": "aidan@gmail.com"
+        },
+        {
+            "username": "Test1234",
+            "password": "JDJiJDEyJEpDajhIMmJIU1NHdkE1Rm9IN2RYUC5pSTl3NFV1dmNLdXA3TDc0QVBPZkFLSVpqT0VHb09D",
+            "gmail": "mm@mm.no"
+        },
+        {
+            "username": "abdullah",
+            "password": "JDJiJDEyJDEyRlZPTVFmWkN4aVVzV01ZMG1uay55ei51ZFBucjhPSEo3ak0wMDhFSnpsZDJ0NnBvOVRh",
+            "gmail": "ra@tata.no"
+        },
+        {
+            "username": "Test12345",
+            "password": "JDJiJDEyJGQwMXIyd2xQdVRwSUNmNVozamVSQmVzN2ZYdkw2YkZGRnRPeG5YekRrRFFXckt4Ylp5Ykth",
+            "gmail": "lol@pwneee.com"
+        },
+        {
+            "username": "ghle",
+            "password": "JDJiJDEyJHZRN2VWUWYvUW84WTFKMy5CZ2R5WS50RWJhbXYvZUlCTm10RS5rWksueExadjY5Z0tSeXJp",
+            "gmail": "m@o.com"
+        },
+        {
+            "username": "madde",
+            "password": "JDJiJDEyJDhNbS5OSDZxVHV2dGUudEJvVENhTS5wdmtQMTVOcDBSNC9nM21raFZUc2IxLmtqQ0JvbUNt",
+            "gmail": "ssm@o.com"
+        }
+    ]
+}
