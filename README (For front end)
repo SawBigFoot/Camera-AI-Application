@@ -32,19 +32,21 @@ Welcome Message: Displays a personalized greeting ({{ name }}) after the user lo
 Run AI Model Button: Starts the facial recognition AI model with a loading indicator.
 Button Interaction: Users can click the button to trigger the AI model and view results.
 Footer: Includes copyright information.
+
 Design & Features:
 Tailwind CSS: Utilizes Tailwind for responsive, customizable styling.
 Custom Fonts & Colors: Incorporates custom fonts (e.g., 'TheFlameProofer') and a warm color scheme for an inviting experience.
 Interactivity: Buttons have hover effects and smooth transitions for a polished user experience.
 JavaScript: Used for handling form submission, modal management, and integration with AI technology.
+
 Technologies Used:
 HTML: Basic structure and layout of each page.
 CSS: Custom styling for elements such as buttons, background colors, and modals.
 JavaScript: Used to manage interactivity, including handling form submission, generating verification codes, and interacting with the AI camera model.
+
 Detailed Code Overview:
 1. Home Page (Navigation)
 This page serves as the landing point for the users to either log in or sign up.
-
 html
 Kopier
 {% extends "home.html" %}
@@ -53,9 +55,9 @@ Kopier
 <h2 class="text-2xl font-semibold text-white">Welcome to the Sidebar App</h2>
 <p class="mt-4">Click the buttons on the sidebar to navigate between forms and articles.</p>
 {% endblock %}
+
 2. Signup Page
 The signup page allows users to create a new account. Upon submitting the form, a modal is displayed to enter the verification code.
-
 html
 Kopier
 <!-- Signup Form -->
@@ -78,6 +80,7 @@ Kopier
     <button id="submitVerification">Bekreft</button>
   </div>
 </div>
+
 JavaScript handles form submission, generating a random verification code, and displaying the modal:
 javascript
 Kopier
@@ -118,18 +121,21 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "none";
     });
 });
+
 3. Identity Detection Camera Page
 This page allows users to interact with the facial recognition camera model.
-
 html
 Kopier
 <h1>Welcome {{ name }}!</h1>
 <button id="runAIModel" class="bg-custom-orange p-3 rounded-lg">Run AI Model</button>
 <div id="loadingIndicator" class="hidden">Loading...</div>
+
 The button triggers the facial recognition model, with a loading indicator shown until the results are ready.
 
 Future Enhancements
 Email Integration: To send the verification code to the user's email.
 Backend Integration: To handle user data securely and integrate with facial recognition AI.
 User Authentication: Add login and session management after successful signup to improve user experience.
+
 This front-end code provides a smooth user experience, guiding users through the signup process, providing interaction with AI-powered identity detection, and ensuring easy navigation through a responsive design.
+
