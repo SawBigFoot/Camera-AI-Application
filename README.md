@@ -38,7 +38,7 @@ pip install opencv-python dlib face_recognition numpy
 You will also need to download the following files:
 shape_predictor_68_face_landmarks.dat (for detecting facial landmarks)
 dlib_face_recognition_resnet_model_v1.dat (for face recognition)
-Ensure these files are placed in the appropriate directories as specified in the code (for example, C:/Users/Dennis/Desktop/Repositories/).
+Ensure these files are placed in the appropriate directories as specified in the code (for example, C:/Users/(YourStructure)/Desktop/Repositories/).
 
 Usage
 Running the Application
